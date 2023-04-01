@@ -1,0 +1,12 @@
+import mysql.connector as sql
+passwd = str(input("ENTER THE DATABASE PASSWORD: "))
+conn = sql.connect(host='localhost', user='root', passwd=passwd)
+cur = conn.cursor()
+cur.execute('create database if not exists Store_Mgmt')
+cur.execute('use Store_Mgmt')
+cur.execute('create table if not exists user_table(username varchar(25) primary key,passwrd varchar(25) not null )')
+print('!!!Table Created Successfully!!!')
+print("")
+print('Next Step \n RUN MAIN.py')
+print()
+print(' Thank You ')
